@@ -1,6 +1,6 @@
-const container = document.querySelector('.container'),
-qrInput = container.querySelector('.form input'),
-generationBtn = container.querySelector('.form button'),
+const container = document.querySelector('.container');
+qrInput = container.querySelector('.form input');
+generationBtn = container.querySelector('.form button');
 qrImg = container.querySelector('.qr-code .img');
 
 generationBtn.addEventListener('click', () => {
@@ -9,17 +9,16 @@ generationBtn.addEventListener('click', () => {
         alert('Preencha o campo com uma URL ou texto')
         return;
     }
-    generationBtn.innerText = "Gerando um Qr Code...";
-    qrImg.scr = `https://api.qrserver.com/v1/create-qr-code/?size=170x170&data=${qrValue}`;
-    qrImg.addEventListener('load', () =>{
+    generationBtn.innerText = "Gerando um QrCode...";
+    qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=170x170&data=${qrValue}`;
+    qrImg.addEventListener('load', () => {
         generationBtn.innerText = "Gerar QrCode";
         container.classList.add('active');
     });
 });
 
 qrInput.addEventListener('keyup', () => {
-    if (!qrInput.value){
+    if(!qrInput.value){
         container.classList.remove('active');
     };
 });
-
