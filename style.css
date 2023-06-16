@@ -10,12 +10,11 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: rgb(250,132,0);
     background: linear-gradient(90deg, rgba(250,132,0,1) 0%, rgba(255,255,255,1) 50%, rgba(250,132,0,1) 100%);
     
 }
 .container {
-    height: 260;
+    height: 260px;
     background: whitesmoke;
     max-width: 410px;
     border-radius: 10px;
