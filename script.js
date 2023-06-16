@@ -10,8 +10,8 @@ generationBtn.addEventListener('click', () => {
         return;
     }
     generationBtn.innerText = "Gerando um Qr Code...";
-    qrImg.scr = `https://api.qrserver.com/v1/create-qr-code/?size=170x170&data${qrValue}`;
-    qrImg.addEventListener('load', () => {
+    qrImg.scr = `https://api.qrserver.com/v1/create-qr-code/?size=170x170&data=${qrValue}`;
+    qrImg.addEventListener('load', () =>{
         generationBtn.innerText = "Gerar QrCode";
         container.classList.add('active');
     });
@@ -22,3 +22,4 @@ qrInput.addEventListener('keyup', () => {
         container.classList.remove('active');
     };
 });
+
